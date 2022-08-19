@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sciencer</title>
+</head>
+<style>
+    body{display: flex;height: 100vh;background-color: 	#d3f4b9;flex-direction: column;}
+    .navbar{display: flex;align-items: center;height: 80px;width: 100%;background-color: #60cdf8;position: absolute;top: 0;left: 0;right: 0;padding-left: 20px;}
+    .navbar h1{position: absolute;left: 30px;color: rgb(12, 182, 12);font-size: 35px;}
+    .navbar h2{position: absolute;right: 40px;font-size: 20px;color: rgb(70, 70, 149);}
+    .section{display: flex;flex-direction: column;position: absolute;top: 150px;left: 300px;justify-content: space-around;}
+    .section h1{font-size: 25px;color: blue;}
+    .section ul{display: flex;flex-direction: column;}
+    .section ul li{width: 600px;height: 80px;font-size: 25px;display: flex;align-items: center;background-color: white;padding-left: 30px;cursor: pointer;border: solid .1px black;color: rgb(12, 182, 12);text-decoration: none;transition: 0.5s;margin-bottom: 5px;border-radius: 3px;border: none;}
+    .section ul li:hover{color: green;margin-left: 5px;}
+    .login{width: 100%;height: 100%;display: flex;align-items: center;flex-direction: column;position: absolute;top: 0px;left: 0px;right: 0px;bottom: 0px;background-color: #d3f4b9;}
+    .login h1{font-size: 80px;color: rgb(12, 182, 12);text-decoration: wavy;}
+    #myname{width: 250px;height: 50px;text-align: center;border-radius: 50px;border: none;outline: none;font-size: 25px;color: blue;}
+    #enter{cursor: pointer;font-size: 20px;color: white;background-color: rgb(12, 182, 12);height: 50px;width: 100px;border-radius: 20px;border: none;outline: none;margin-top: 50px;}
+    #sohbet{display: flex;align-items: center;justify-content: center;height: 100vh;flex-direction: column;background-color: #d3f4b9;}
+    .sec{display: flex;flex-direction: column;}
+    #sohbet h1{width: 96vh;height: 5vh;color: white;background-color: green;display: flex;align-items: center;border-top-left-radius: 10px;border-top-right-radius: 10px;padding-left: 30px;position: absolute;top: 0px;}
+    .Global{width: 100vh;height: 80vh;overflow-y: scroll;justify-content: flex-start;background-color: white;flex-direction: column;border: 1px solid rgb(12, 182, 12);}
+    .hunger{width: 100vh;height: 80vh;overflow-y: scroll;justify-content: flex-start;background-color: white;flex-direction: column;border: 1px solid rgb(12, 182, 12);}
+    .population{width: 100vh;height: 80vh;overflow-y: scroll;justify-content: flex-start;background-color: white;flex-direction: column;border: 1px solid rgb(12, 182, 12);}
+    .dirty{width: 100vh;height: 80vh;overflow-y: scroll;justify-content: flex-start;background-color: white;flex-direction: column;border: 1px solid rgb(12, 182, 12);}
+    .climate{width: 100vh;height: 80vh;overflow-y: scroll;justify-content: flex-start;background-color: white;flex-direction: column;border: 1px solid rgb(12, 182, 12);}
+    .in{display: flex;flex-direction: row;}
+    #text{width: 90vh;height: 5vh;font-size: 20px;border-bottom-left-radius: 10px;border: 0.5px solid green;outline: 0.5px solid green;}
+    #send{width: 9vh;height: 6vh;color: white;background-color: green;border: none;cursor: pointer;}
+    .message{width: 400px;height: 100px;margin-left: 100px;border-radius: 20px;text-align: center;background-color: rgb(208, 208, 248);color: black;margin-top: 15px;box-shadow: 1px .5px blue;position: relative;display: flex;align-items: center;justify-content: center;}
+    .message_mine{width: 400px;height: 100px;margin-left: 30px;border-radius: 20px;text-align: center;background-color: rgb(159, 255, 159);color: black;margin-top: 15px;box-shadow: 1px .5px blue;display: flex;align-items: center;justify-content: center;}
+    strong{position: absolute;color: blue;bottom: 5px;right: 5px;font-size: 15px;}
+    .planet{width: 60px;height: 60px;}
+    #back{width: 50px;height: 50px;color: white;background-color: blue;position: absolute;left: 60px;top: 20px;border: none;border-radius: 10px;cursor: pointer;}
+    .picture{position: absolute;top: 60px;left: 450px;}
+</style>
+<body>
+    <div class="login" id="2">
+            <img src="https://www.hareketligifler.net/data/media/1160/yerkure-ve-dunya-hareketli-resim-0030.gif" class="picture">
+            <h1>Sciencer</h1>
+        <input type="text" placeholder="isminizi girin" id="myname">
+        <input type="button" onclick="enter()" value="Başla" id="enter">
+    </div>
+    <div id="all">
+        <nav class="navbar">
+            <h1>Sciencer</h1>
+            <img src="https://www.hareketligifler.net/data/media/1160/yerkure-ve-dunya-hareketli-resim-0030.gif" class="planet">
+            <h2><p>Dünyayı daha iyi bir yer yapalım</p></h2>
+        </nav>
+        <div class="section">
+            <h1>öne çıkan sorunlar:</h1>
+            <ul>
+                <li id="btn">Küresel ısınmanın önüne nasıl geçilir?</li>
+                <li id="btn2">Yiyecek israfı nasıl önlenir?</li>
+                <li id="btn3">Aşırı nüfus artışına karşı ne yapabiliriz?</li>
+                <li id="btn4">Hava kirliliği hakkında konuşalım mı?</li>
+                <li id="btn5">Kürsel ikim değişikliğine karşı tedbirler</li>
+            </ul>
+        </div>
+    </div>
+    <div id="sohbet">
+        <button id="back">back</button>
+        <h1>Sciencer</h1>
+        <div class="sec">
+            <div class="Global"></div>
+            <div class="hunger"></div>
+            <div class="population"></div>
+            <div class="dirty"></div>
+            <div class="climate"></div>
+            <div class="in">
+                <input type="text" id="text">
+                <button id="send">send</button>
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+    var global=document.querySelector(".Global");
+    var hunger=document.querySelector(".hunger");
+    var population=document.querySelector(".population");
+    var dirty=document.querySelector(".dirty");
+    var climate=document.querySelector(".climate");
+    var input=document.getElementById("myname");
+    var sohbet=document.getElementById("sohbet");
+    var btn=document.getElementById("btn");
+    var send=document.getElementById("send");
+    var myname="";
+    document.getElementById("all").style.display="none";
+    sohbet.style.display="none";
+    var back=document.getElementById("back");
+    var control;
+    btn.addEventListener("click",function(){
+        document.getElementById("all").style.display="none";
+        sohbet.style.display="flex";
+        global.style.display="flex";
+        hunger.style.display="none";
+        population.style.display="none";
+        dirty.style.display="none";
+        climate.style.display="none";
+        control=1;
+        init();
+    })
+    btn2.addEventListener("click",function(){
+        document.getElementById("all").style.display="none";
+        sohbet.style.display="flex";
+        global.style.display="none";
+        hunger.style.display="flex";
+        dirty.style.display="none";
+        population.style.display="none";
+        climate.style.display="none";
+        control=2;
+        init();
+    })
+    btn3.addEventListener("click",function(){
+        document.getElementById("all").style.display="none";
+        sohbet.style.display="flex";
+        global.style.display="none";
+        hunger.style.display="none";
+        dirty.style.display="none";
+        population.style.display="flex";
+        climate.style.display="none";
+        control=3;
+        init();
+    })
+    btn4.addEventListener("click",function(){
+        document.getElementById("all").style.display="none";
+        sohbet.style.display="flex";
+        global.style.display="none";
+        hunger.style.display="none";
+        dirty.style.display="flex";
+        population.style.display="none";
+        climate.style.display="none";
+        control=4;
+        init();
+    })
+    btn5.addEventListener("click",function(){
+        document.getElementById("all").style.display="none";
+        sohbet.style.display="flex";
+        global.style.display="none";
+        hunger.style.display="none";
+        dirty.style.display="none";
+        population.style.display="none";
+        climate.style.display="flex";
+        control=5;
+        init();
+    })
+    back.onclick=function(){
+        document.getElementById("all").style.display="flex";
+        sohbet.style.display="none";
+    }
+    function enter(){
+        document.getElementById("2").style.display="none";
+        document.getElementById("all").style.display="flex";
+        myname+=input.value;
+    }
+    function init(){
+        const firebaseConfig = {
+    apiKey: "AIzaSyBysg97dW2b88vVR-AA7nkhK_8vLInbL4I",
+    authDomain: "sciencer-86965.firebaseapp.com",
+    projectId: "sciencer-86965",
+    storageBucket: "sciencer-86965.appspot.com",
+    messagingSenderId: "846196171933",
+    appId: "1:846196171933:web:85db48b9d7b63ffb31e074"
+  };
+
+  firebase.initializeApp(firebaseConfig);
+  send.onclick=function(){
+            if(control==1){
+                firebase.database().ref("global").push().set({
+                    message:document.getElementById("text").value,
+                    sender:myname
+                })
+            }
+            if(control==2){
+                firebase.database().ref("hunger").push().set({
+                    message:document.getElementById("text").value,
+                    sender:myname
+                })
+            }
+            if(control==3){
+                firebase.database().ref("population").push().set({
+                    message:document.getElementById("text").value,
+                    sender:myname
+                })
+            }
+            if(control==4){
+                firebase.database().ref("dirty").push().set({
+                    message:document.getElementById("text").value,
+                    sender:myname
+                })
+            }
+            if(control==5){
+                firebase.database().ref("climate").push().set({
+                    message:document.getElementById("text").value,
+                    sender:myname
+                })
+            }
+            document.getElementById("text").value="";
+        }
+        firebase.database().ref("global").on("child_added",(snapshot)=>{
+            var html="";
+            if(snapshot.val().sender==myname){
+                html+='<li type="none" class="message_mine">'+'<p>'+snapshot.val().message+'</p>'+'</li>';
+            }else{
+                html+='<li type="none" class="message">'+'<p>'+snapshot.val().message+'</p>'+'<strong>'+snapshot.val().sender+'</strong>'+'</li>';
+            }
+            document.querySelector(".Global").innerHTML+=html;
+            messages.scroll({behavior:"smooth",top:99999999999999999})
+        })
+        firebase.database().ref("hunger").on("child_added",(snapshot)=>{
+            var html="";
+            if(snapshot.val().sender==myname){
+                html+='<li type="none" class="message_mine">'+'<p>'+snapshot.val().message+'</p>'+'</li>';
+            }else{
+                html+='<li type="none" class="message">'+'<p>'+snapshot.val().message+'</p>'+'<strong>'+snapshot.val().sender+'</strong>'+'</li>';
+            }
+            document.querySelector(".hunger").innerHTML+=html;
+            messages.scroll({behavior:"smooth",top:99999999999999999})
+        })
+        firebase.database().ref("population").on("child_added",(snapshot)=>{
+            var html="";
+            if(snapshot.val().sender==myname){
+                html+='<li type="none" class="message_mine">'+'<p>'+snapshot.val().message+'</p>'+'</li>';
+            }else{
+                html+='<li type="none" class="message">'+'<p>'+snapshot.val().message+'</p>'+'<strong>'+snapshot.val().sender+'</strong>'+'</li>';
+            }
+            document.querySelector(".population").innerHTML+=html;
+            messages.scroll({behavior:"smooth",top:99999999999999999})
+        })
+        firebase.database().ref("dirty").on("child_added",(snapshot)=>{
+            var html="";
+            if(snapshot.val().sender==myname){
+                html+='<li type="none" class="message_mine">'+'<p>'+snapshot.val().message+'</p>'+'</li>';
+            }else{
+                html+='<li type="none" class="message">'+'<p>'+snapshot.val().message+'</p>'+'<strong>'+snapshot.val().sender+'</strong>'+'</li>';
+            }
+            document.querySelector(".dirty").innerHTML+=html;
+            messages.scroll({behavior:"smooth",top:99999999999999999})
+        })
+        firebase.database().ref("climate").on("child_added",(snapshot)=>{
+            var html="";
+            if(snapshot.val().sender==myname){
+                html+='<li type="none" class="message_mine">'+'<p>'+snapshot.val().message+'</p>'+'</li>';
+            }else{
+                html+='<li type="none" class="message">'+'<p>'+snapshot.val().message+'</p>'+'<strong>'+snapshot.val().sender+'</strong>'+'</li>';
+            }
+            document.querySelector(".climate").innerHTML+=html;
+            messages.scroll({behavior:"smooth",top:99999999999999999})
+        })
+}
+
+</script>
+<script src="https://www.gstatic.com/firebasejs/7.20.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.20.0/firebase-database.js"></script>
+</html>
