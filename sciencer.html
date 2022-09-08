@@ -159,16 +159,16 @@
     }
     function init(){
         const firebaseConfig = {
-    apiKey: "AIzaSyBysg97dW2b88vVR-AA7nkhK_8vLInbL4I",
-    authDomain: "sciencer-86965.firebaseapp.com",
-    projectId: "sciencer-86965",
-    storageBucket: "sciencer-86965.appspot.com",
-    messagingSenderId: "846196171933",
-    appId: "1:846196171933:web:85db48b9d7b63ffb31e074"
-  };
-
-  firebase.initializeApp(firebaseConfig);
-  send.onclick=function(){
+            apiKey: "AIzaSyC_jzwljVINRlnl2-IYTZQenAP-a2SrX3g",
+            authDomain: "sciencer-669da.firebaseapp.com",
+            databaseURL: "https://sciencer-669da-default-rtdb.firebaseio.com",
+            projectId: "sciencer-669da",
+            storageBucket: "sciencer-669da.appspot.com",
+            messagingSenderId: "319759630294",
+            appId: "1:319759630294:web:53afeea63a2de035fc2e77"
+        };
+        firebase.initializeApp(firebaseConfig);
+        send.onclick=function(){
             if(control==1){
                 firebase.database().ref("global").push().set({
                     message:document.getElementById("text").value,
