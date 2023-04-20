@@ -1,0 +1,262 @@
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container {
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 150px;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    height: 80px;
+    width: 100%;
+    background-color: #60cdf8;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding-left: 20px;
+}
+
+.navbar h1 {
+    position: absolute;
+    left: 30px;
+    color: rgb(12, 182, 12);
+    font-size: 35px;
+}
+
+.navbar h2 {
+    position: absolute;
+    right: 40px;
+    font-size: 20px;
+    color: rgb(70, 70, 149);
+}
+
+
+#send {
+    width: 9vh;
+    height: 6vh;
+    color: white;
+    background-color: green;
+    border: none;
+    cursor: pointer;
+}
+
+strong {
+    position: absolute;
+    color: blue;
+    bottom: 5px;
+    right: 5px;
+    font-size: 15px;
+}
+
+#back {
+    margin: 20px;
+    cursor: pointer;
+}
+
+.picture {
+    position: absolute;
+    top: 60px;
+    left: 450px;
+}
+
+:root {
+    --body-bg: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    --msger-bg: #fff;
+    --border: 2px solid #ddd;
+    --left-msg-bg: #ececec;
+    --right-msg-bg: #579ffb;
+}
+
+html {
+    box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+.msger {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 867px;
+    margin: 25px 10px;
+    height: calc(100% - 50px);
+    border: var(--border);
+    border-radius: 5px;
+    background: var(--msger-bg);
+    box-shadow: 0 15px 15px -5px rgba(0, 0, 0, 0.2);
+}
+
+.msger-header {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    border-bottom: var(--border);
+    background: white;
+    color: rgb(1, 1, 100);
+}
+
+#Global {
+    height: 80vh;
+    overflow-y: scroll;
+    justify-content: flex-start;
+    background-color: white;
+    flex-direction: column;
+    border: 1px solid rgb(12, 182, 12);
+    padding: 30px;
+}
+
+#hunger {
+    height: 80vh;
+    overflow-y: scroll;
+    justify-content: flex-start;
+    background-color: white;
+    flex-direction: column;
+    border: 1px solid rgb(12, 182, 12);
+    padding: 30px;
+}
+
+#population {
+    height: 80vh;
+    overflow-y: scroll;
+    justify-content: flex-start;
+    background-color: white;
+    flex-direction: column;
+    border: 1px solid rgb(12, 182, 12);
+    padding: 30px;
+}
+
+#dirty {
+    height: 80vh;
+    overflow-y: scroll;
+    justify-content: flex-start;
+    background-color: white;
+    flex-direction: column;
+    border: 1px solid rgb(12, 182, 12);
+    padding: 30px;
+}
+
+#climate {
+    height: 80vh;
+    overflow-y: scroll;
+    justify-content: flex-start;
+    background-color: white;
+    flex-direction: column;
+    border: 1px solid rgb(12, 182, 12);
+    padding: 30px;
+}
+
+.msg {
+    display: flex;
+    align-items: flex-end;
+    margin-bottom: 10px;
+}
+
+.msg:last-of-type {
+    margin: 0;
+}
+
+.msg-img {
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+    background: #ddd;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    border-radius: 50%;
+}
+
+.msg-bubble {
+    max-width: 450px;
+    padding: 15px;
+    border-radius: 15px;
+    background: rgb(5, 5, 116);
+    color: white;
+    margin-left: 30px;
+    font-size: 17px;
+}
+
+.msg-bubble-mine {
+    max-width: 450px;
+    padding: 15px;
+    border-radius: 15px;
+    background: rgb(11, 250, 11);
+    color: black;
+    font-size: 17px;
+}
+
+.msg-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.msg-info-name {
+    margin-right: 10px;
+    font-weight: bold;
+    color: white;
+}
+
+.msg-info-time {
+    font-size: 0.75em;
+    color: beige;
+}
+
+.left-msg .msg-bubble {
+    border-bottom-left-radius: 0;
+}
+
+.right-msg {
+    flex-direction: row-reverse;
+}
+
+.right-msg .msg-bubble {
+    background: var(--right-msg-bg);
+    color: #fff;
+    border-bottom-right-radius: 0;
+}
+
+.right-msg .msg-img {
+    margin: 0 0 0 10px;
+}
+
+.msger-inputarea {
+    display: flex;
+    padding: 10px;
+    border-top: var(--border);
+    background: #eee;
+}
+
+.msger-inputarea * {
+    padding: 10px;
+    border: none;
+    border-radius: 3px;
+    font-size: 1em;
+}
+
+.msger-input {
+    flex: 1;
+    background: #ddd;
+}
+
+th,
+td {
+    cursor: pointer;
+}
