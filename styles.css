@@ -2,6 +2,8 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+    margin: 0px;
+    padding: 0px;
 }
 
 .container {
@@ -104,8 +106,8 @@ html {
 
 .msger-header {
     display: flex;
+    padding: 5px;
     justify-content: space-between;
-    padding: 10px;
     border-bottom: var(--border);
     background: white;
     color: rgb(1, 1, 100);
