@@ -2,93 +2,92 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sciencer</title>
-    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css'> 
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
-        crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sciencer</title>
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css'>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+    crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
-    <div class="container" id="2">
-        <div class="row" style="width: 50%;">
-            <div class="col-md-12"
-                style="display: flex;flex-direction: column;align-items: center;justify-content: center;">
-                <h1 style="color: rgb(17, 17, 217);margin-bottom: 20px;">Sciencer</h1>
-                <div id="error" style="color: red;display: none;">You have to write a name</div>
-                <input type="text" placeholder="Type your name..." id="myname" class="form-control"
-                    style="margin-bottom: 20px;">
-                <button type="button" onclick="enter()" value="Start" id="enter"
-                    class="btn btn-primary btn-lg btn-block">Start</button>
-            </div>
-        </div>
+  <div class="container" id="2">
+    <div class="row" style="display: flex;flex-direction: column;justify-content: space-around;height: 300px;width: 50%;">
+      <h1 style="color: rgb(17, 17, 217);">Sciencer</h1>
+      <div id="error" style="color: red;display: none;">You have to write a name</div>
+      <div>
+        <h5>Username:</h5>
+        <input type="text" placeholder="Type your name..." id="myname" class="form-control">
+      </div>
+      <button type="button" onclick="enter()" value="Start" id="enter" class="btn btn-info" style="color: white;">Log
+        in</button>
     </div>
-    <div id="all">
-        <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
-            <a class="navbar-brand" href="#">Sciencer</a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor02"
-                aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-        </nav>
-        <table class="table" style="margin-top: 100px;">
-            <thead>
-              <tr>
-                <th>Topics You can Chat...</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <th scope="row">1</th>
-                <td id="btn">Global Warming</td>
-              </tr>
-              <tr>
-                <th scope="row">2</th>
-                <td id="btn2">Wasting Foods</td>
-              </tr>
-              <tr>
-                <th scope="row">3</th>
-                <td id="btn3">Enormous Populations</td>
-              </tr>
-              <tr>
-                <th scope="row">4</th>
-                <td id="btn4">Air Pollution</td>
-              </tr>
-              <tr>
-                <th scope="row">5</th>
-                <td id="btn5">Global Climate Change</td>
-              </tr>
-            </tbody>
-          </table>
-    </div>
-    <section class="msger" id="sohbet">
-        <button id="back" class="btn btn-primary">back</button>
-        <header class="msger-header">
-            <div class="msger-header-title">
-                <i class="fas fa-comment-alt"></i> Sciencer Chat
-            </div>
-        </header>
-        <main id="Global" class="msger-chat"></main>
-        <main id="hunger" class="msger-chat"></main>
-        <main id="population" class="msger-chat"></main>
-        <main id="dirty" class="msger-chat"></main>
-        <main id="climate" class="msger-chat"></main>
+  </div>
+  <div id="all">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+      <a class="navbar-brand" href="#">Sciencer</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor02"
+        aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    </nav>
+    <table class="table" style="margin-top: 100px;">
+      <thead>
+        <tr>
+          <th>Topics You can Chat...</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th scope="row">1</th>
+          <td id="btn">Global Warming</td>
+        </tr>
+        <tr>
+          <th scope="row">2</th>
+          <td id="btn2">Wasting Foods</td>
+        </tr>
+        <tr>
+          <th scope="row">3</th>
+          <td id="btn3">Enormous Populations</td>
+        </tr>
+        <tr>
+          <th scope="row">4</th>
+          <td id="btn4">Air Pollution</td>
+        </tr>
+        <tr>
+          <th scope="row">5</th>
+          <td id="btn5">Global Climate Change</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <section class="msger" id="sohbet">
+    <button id="back" class="btn btn-primary">back</button>
+    <header class="msger-header">
+      <div class="msger-header-title">
+        <i class="fas fa-comment-alt"></i> Sciencer Chat
+      </div>
+    </header>
+    <main id="Global" class="msger-chat"></main>
+    <main id="hunger" class="msger-chat"></main>
+    <main id="population" class="msger-chat"></main>
+    <main id="dirty" class="msger-chat"></main>
+    <main id="climate" class="msger-chat"></main>
 
-        <form class="msger-inputarea">
-            <input type="text" class="form-control" aria-label="Default" placeholder="Type your message here..."
-                aria-describedby="inputGroup-sizing-default" id="text" 
-                style="border: 1px solid black;">
-            <button type="button" class="btn btn-info rounded-4" id="send" style="display: flex;align-items: center;justify-content: center;width: 50px;height: 50px;">
-                <i class='fa fa-send' style='color: white;font-size: 20px;'></i>
-            </button>
-        </form>
-    </section>
+    <form class="msger-inputarea">
+      <input type="text" class="form-control" aria-label="Default" placeholder="Type your message here..."
+        aria-describedby="inputGroup-sizing-default" id="text" style="border: 1px solid black;">
+      <button type="button" class="btn btn-info rounded-4" id="send"
+        style="display: flex;align-items: center;justify-content: center;width: 50px;height: 50px;">
+        <i class='fa fa-send' style='color: white;font-size: 20px;'></i>
+      </button>
+    </form>
+  </section>
 </body>
 <script src="scripts.js"></script>
 <script src="https://www.gstatic.com/firebasejs/7.20.0/firebase-app.js"></script>

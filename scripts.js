@@ -87,11 +87,12 @@ function date(stamp) {
     var hour = "0" + time.getHours()
     var minute = "0" + time.getMinutes()
     var day = "0" + time.getDate()
-    var month = "0" + time.getDay()
+    var month = "0" + (time.getMonth() + 1)
     var year = time.getFullYear()
     var full_time = hour.substr(-2) + ":" + minute.substr(-2) + " / " + day.substr(-2) + "/" + month.substr(-2) + "/" + year;
     return full_time
 }
+
 function init() {
     const firebaseConfig = {
         apiKey: "AIzaSyC_jzwljVINRlnl2-IYTZQenAP-a2SrX3g",

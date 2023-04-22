@@ -112,7 +112,7 @@ html {
 }
 
 #Global {
-    height: 80vh;
+    height: 60vh;
     overflow-y: scroll;
     justify-content: flex-start;
     background-color: white;
@@ -122,7 +122,7 @@ html {
 }
 
 #hunger {
-    height: 80vh;
+    height: 60vh;
     overflow-y: scroll;
     justify-content: flex-start;
     background-color: white;
@@ -132,7 +132,7 @@ html {
 }
 
 #population {
-    height: 80vh;
+    height: 60vh;
     overflow-y: scroll;
     justify-content: flex-start;
     background-color: white;
@@ -142,7 +142,7 @@ html {
 }
 
 #dirty {
-    height: 80vh;
+    height: 60vh;
     overflow-y: scroll;
     justify-content: flex-start;
     background-color: white;
@@ -152,7 +152,7 @@ html {
 }
 
 #climate {
-    height: 80vh;
+    height: 60vh;
     overflow-y: scroll;
     justify-content: flex-start;
     background-color: white;
